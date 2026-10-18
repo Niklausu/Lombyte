@@ -92,18 +92,13 @@ s32 sound_options_menu(struct SoundMenu *menu) {
             music_volume = (music_volume - 3 <= 0) ? 0 : music_volume - 3;
         }
     }
-    {
-        s32 *music_volume_ptr = &music_volume;
-        if ((previous_music_volume != *music_volume_ptr) ||
-            (previous_sound_volume != *sound_volume_ptr)) {
-            D_0013E550.group_0_volume = *sound_volume_ptr * 8 / 10;
-            D_0013E550.group_1_volume = *music_volume_ptr;
-            D_0013E550.group_2_volume = *music_volume_ptr;
-            D_0013E550.group_3_volume = *sound_volume_ptr * 7 / 10;
-            scaled_sound_volume = *sound_volume_ptr * 7 / 10;
-            D_0013E550.group_4_volume = scaled_sound_volume;
-            D_0013E550.group_5_volume = *sound_volume_ptr;
-        }
+    if ((previous_music_volume != music_volume) || (previous_sound_volume != *sound_volume_ptr)) {
+        D_0013E550.group_0_volume = *sound_volume_ptr * 8 / 10;
+        D_0013E550.group_2_volume = D_0013E550.group_1_volume = music_volume;
+        D_0013E550.group_3_volume = *sound_volume_ptr * 7 / 10;
+        scaled_sound_volume = *sound_volume_ptr * 7 / 10;
+        D_0013E550.group_4_volume = scaled_sound_volume;
+        D_0013E550.group_5_volume = *sound_volume_ptr;
     }
     if (D_0013C940.pressed_buttons & 0x40) {
         if (menu->selected_option == 2) {
