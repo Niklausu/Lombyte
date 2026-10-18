@@ -12266,7 +12266,8 @@
       },
       {
         "unit": "textbin/ui/menus/audio/sound_options_menu",
-"source_path": "src/textbin/ui/menus/audio/sound_options_menu.c",        "address": "0x0021cb30",
+        "source_path": "src/textbin/ui/menus/audio/sound_options_menu.c",
+        "address": "0x0021cb30",
         "current_name": "FUN_0021cb30",
         "proposed_name": "sound_options_menu",
         "logical_group": "ui/menus/audio",

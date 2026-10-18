@@ -1692,7 +1692,7 @@ segments:
           - [0x11da44, textbin, text_gap_0021cac4_after_fun_0021ca98]
           - [0x11da48, c, ui/menus/reset_pause_memory_card_state]
           - [0x11da5c, textbin, text_gap_0021cadc_after_fun_0021cac8]
-- [0x11da60, c, ui/menus/reset_menu_graphics_buffers]
+          - [0x11da60, c, ui/menus/reset_menu_graphics_buffers]
           - [0x11da80, c, ui/menus/audio/set_pause_sound_volume]
           - [0x11dab0, c, textbin/ui/menus/audio/sound_options_menu]
           - [0x11dd80, c, textbin/ui/menus/audio/draw_sound_menu]
